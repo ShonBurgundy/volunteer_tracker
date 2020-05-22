@@ -68,4 +68,12 @@ describe('#Volunteer') do
     end
   end
 
+  describe('#project') do
+    it('finds a project a volunteer belongs to') do
+      volunteer1 = Volunteer.new({:name => 'Jane', :project_id => @project.id, :id => nil})
+      volunteer1.save
+      expect(volunteer.project()).to(eq(@project))
+    end
+  end
+
 end

@@ -49,4 +49,8 @@ class Volunteer
     volunteers
   end
 
+  def project
+
+  end
+
 end
