@@ -13,5 +13,8 @@ class Volunteer
     (self.name() == volunteer_to_compare.name()) && (self.project_id() == volunteer_to_compare.project_id())
   end
   
-  
+  def self.all
+    
+  end
+
 end
