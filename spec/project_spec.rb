@@ -5,7 +5,7 @@ describe('#Project') do
   describe('#title') do
     it('returns the project title') do
       project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
-      expect(project.title).to eq 'Teaching Kids to Code'
+      expect(project.title).to(eq('Teaching Kids to Code'))
     end
   end
 
@@ -14,6 +14,7 @@ describe('#Project') do
       project = Project.new({:title => 'Teaching Kids to Code', :id => nil})
       expect(project.id).to(eq(nil))
     end
+  end
 
   describe('#id') do
     it('returns the id of the project after saving project') do
@@ -35,6 +36,7 @@ describe('#Project') do
     it('is empty to start') do
       expect(Project.all).to(eq([]))
     end
+  end
 
   describe('.all') do
     it('returns all projects') do
@@ -93,4 +95,5 @@ describe('#Project') do
       expect(Project.all).to(eq([]))
     end
   end
+
 end
