@@ -28,4 +28,8 @@ class Project
     @title == project_to_compare.title
   end
 
+  def self.find(id)
+    
+  end
+
 end
