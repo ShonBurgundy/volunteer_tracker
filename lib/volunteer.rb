@@ -30,4 +30,8 @@ class Volunteer
     @id = result.first().fetch("id").to_i
   end
 
+  def self.find
+
+  end
+
 end
