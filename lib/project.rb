@@ -7,5 +7,9 @@ class Project
     @title = attributes.fetch(:title)
     @id = attributes.fetch(:id)
   end
-  
+
+  def self.all
+    
+  end
+
 end
