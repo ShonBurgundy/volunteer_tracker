@@ -10,7 +10,7 @@ require("pg")
 DB = PG.connect({:dbname => "volunteer_tracker"})
 
 get('/') do
-  @projects = Project.all
+  @projects = Project.all()
   erb(:homepage)
 end
 
@@ -38,4 +38,11 @@ patch('/project/:id') do
   @project.update(params[:title])
   @volunteers = Volunteer.all()
   erb(:details)
+end
+
+delete('/project/:id') do
+  @project = Project.find(params[:id].to_i())
+  @project.delete()
+  @projects = Project.all()
+  erb(:homepage)
 end
