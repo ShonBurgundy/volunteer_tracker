@@ -21,3 +21,21 @@ post('/projects') do
   @projects = Project.all()
   erb(:homepage)
 end
+
+get('/project/:id') do
+  @project = Project.find(params[:id].to_i())
+  @volunteers = Volunteer.all()
+  erb(:details)
+end
+
+get('/projects/:id/edit') do
+  @project = Project.find(params[:id].to_i())
+  erb(:edit_page)
+end
+
+patch('/project/:id') do
+  @project = Project.find(params[:id].to_i())
+  @project.update(params[:title])
+  @volunteers = Volunteer.all()
+  erb(:details)
+end
