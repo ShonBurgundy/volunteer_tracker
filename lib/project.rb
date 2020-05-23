@@ -48,5 +48,4 @@ class Project
     Volunteer.find_by_project(@id)
   end  
 
-
 end

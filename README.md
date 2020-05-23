@@ -25,6 +25,8 @@ _A webpage which will allow user to input new projects & add volunteers to each 
 ## Setup/Installation Requirements
 
 1. In the terminal, type 'git clone https://github.com/ShonBurgundy/volunteer_tracker'.
+1. Install Ruby, instructions can be found here 'https://www.ruby-lang.org/en/documentation/installation/'
+1. Install PostGres, instructions can be found here 'https://www.postgresql.org/download/'
 1. Enter the directory, with 'volunteer_tracker' 
 1. Open the downloaded directory in a text editor of your choice.
   (VSCode, Atom, etc.) 

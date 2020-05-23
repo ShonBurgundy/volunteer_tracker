@@ -1,0 +1,10 @@
+<h2>Volunteer: <%= @volunteer.name %> is working on the <%= @projects[0].title %> Project</h2>
+
+  <form action="/volunteer/<%= @volunteer.id %>" method="post">
+    <input name="_method" type="hidden" value="patch">
+
+    <input id="name" name="name" type="text" placeholder="Edit Name">
+    <button type="submit" class="btn btn-danger">Update Volunteer</button>
+  </form>
+
+<br><a href="/">Return to homepage.</a>
