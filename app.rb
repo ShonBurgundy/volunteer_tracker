@@ -35,7 +35,7 @@ end
 patch('/project/:id') do
   @project = Project.find(params[:id].to_i())
   @project.update(params[:title])
-  @volunteers = Volunteer.all()
+  @volunteers = @project.volunteers()
   erb(:details)
 end
 
@@ -53,7 +53,7 @@ post('/project/:id/volunteers') do
   name = params[:name]
   volunteer = Volunteer.new({:name => name, :project_id => @project.id, :id => nil})
   volunteer.save()
-  @volunteers = Volunteer.all()
+  @volunteers = @project.volunteers()
   erb(:details)
 end
 
@@ -67,6 +67,6 @@ patch('/volunteer/:id') do
   @volunteer = Volunteer.find(params[:id].to_i())
   @project = @volunteer.project
   @volunteer.update(params[:name], @project.id)
-  @volunteers = Volunteer.all()
+  @volunteers = @project.volunteers()
   erb(:details)
 end
